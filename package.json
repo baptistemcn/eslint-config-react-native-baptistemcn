@@ -1,13 +1,20 @@
 {
   "name": "eslint-config-react-native-baptistemcn",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint -c main.js tests/*.tsx --fix"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baptistemcn/eslint-config-react-native-baptistemcn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/baptistemcn/eslint-config-react-native-baptistemcn/issues"
+  },
+  "homepage": "https://github.com/baptistemcn/eslint-config-react-native-baptistemcn#readme",
+  "author": "Baptiste Marcon <baptistemcn@icloud.com>",
   "license": "ISC",
   "dependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
