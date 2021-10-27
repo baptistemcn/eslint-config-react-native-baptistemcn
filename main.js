@@ -1,34 +1,10 @@
 module.exports = {
   plugins: ["import"],
-  settings: {
-    "import/resolver": {
-      node: {
-        extensions: [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx",
-          ".d.ts",
-          ".android.js",
-          ".android.jsx",
-          ".android.ts",
-          ".android.tsx",
-          ".ios.js",
-          ".ios.jsx",
-          ".ios.ts",
-          ".ios.tsx",
-          ".web.js",
-          ".web.jsx",
-          ".web.ts",
-          ".web.tsx",
-        ],
-      },
-    },
-  },
   extends: [
     "plugin:@typescript-eslint/recommended",
     "@react-native-community",
     "prettier",
+    "plugin:import/typescript",
   ],
   rules: {
     quotes: [
@@ -42,6 +18,7 @@ module.exports = {
     "@typescript-eslint/ban-ts-comment": 2,
     "@typescript-eslint/no-explicit-any": 2,
     "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/consistent-type-imports": 2,
     "react/jsx-filename-extension": ["error", { extensions: [".tsx"] }],
     "react-native/no-unused-styles": 2,
     "react-native/split-platform-components": 2,
@@ -53,6 +30,7 @@ module.exports = {
     "import/order": ["error", { "newlines-between": "always" }],
     "import/no-duplicates": 2,
     "import/no-useless-path-segments": 2,
+    "import/no-cycle": 0,
     "import/prefer-default-export": 0,
     "import/named": 0,
     "import/namespace": 0,
@@ -63,6 +41,7 @@ module.exports = {
     "import/no-deprecated": 0,
     "@typescript-eslint/indent": 0,
     "import/no-anonymous-default-export": 2,
+    "import/no-default-export": 2,
     "react-hooks/rules-of-hooks": 2,
     "react-hooks/exhaustive-deps": [
       "error",
@@ -74,5 +53,9 @@ module.exports = {
     "prefer-destructuring": 2,
     "no-nested-ternary": 2,
     "comma-dangle": 0,
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "no-shadow": "off",
+    curly: "error",
   },
 };
